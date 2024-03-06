@@ -1,0 +1,128 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+body::before{
+    content: '';
+    position: absolute;
+    background:  url("./image/sky.jpg") no-repeat center center/cover ;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.flag{
+    background-color: transparent;
+    height: 360px;
+    width: 540px;
+    /*border: 2px solid black;*/
+    box-shadow: 0px 0px 90px 1px rgb(92, 20, 20);
+    position: relative;
+    top: 130px;
+    left: 150px; 
+}
+.flow{
+position: absolute;
+height: 100%;
+width: 100%;
+background-image: linear-gradient(
+    -128deg, rgba(70,80,90,0) 40%,
+    rgba(250,250,250,0.8)
+    46%, rgba(70,80,90,0) 50%);
+animation-name: flow;
+animation-duration: 5s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
+
+.top{
+    height: 120px;
+    width: 100%;
+    background-color: #FF671F;
+}
+.middle{
+    height: 120px;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wheel{
+    height: 95px;
+    width: 95px;
+    border: 5px solid #06038d;
+    border-radius: 50%;
+    position: relative; 
+    animation: circle;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes circle {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+.wheel .line{
+    height: 100%;
+    width: 2px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    background: #06038d;
+}
+.line:nth-child(1){
+    transform: rotate(15deg);
+}
+.line:nth-child(2){
+    transform: rotate(30deg);
+}
+.line:nth-child(3){
+    transform: rotate(45deg);
+}
+.line:nth-child(4){
+    transform: rotate(60deg);
+}
+.line:nth-child(5){
+    transform: rotate(75deg);
+}
+.line:nth-child(6){
+    transform: rotate(90deg);
+}
+.line:nth-child(7){
+    transform: rotate(105deg);
+}
+.line:nth-child(8){
+    transform: rotate(120deg);
+}
+.line:nth-child(9){
+    transform: rotate(135deg);
+}
+.line:nth-child(10){
+    transform: rotate(150deg);
+}
+.line:nth-child(11){
+    transform: rotate(165deg);
+}
+.line:nth-child(12){
+    transform: rotate(180deg);
+}
+.bottom{
+    height: 120px;
+    width: 100%;
+    background-color: #046a38;
+}
+@keyframes flow {
+ 0%{
+  background-position:
+  -400px 0px, -400px 0px,
+  -400px 0px,-400px 0px;
+ }
+ 100%{
+  background-position: 800px 0px,
+  800px 0px, 800px 0px, 800px 0px;
+ }
+}
